@@ -1,0 +1,174 @@
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Efficio</h2>
+
+    <div class="user">
+      <img src="https://i.pravatar.cc/40">
+      <div>
+        <p>Arnold Smith</p>
+        <span>arnold@gmail.com</span>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <p class="menu">Main Menu</p>
+      <ul>
+        <li class="active"><lucide-icon [img]="icons.dashboard"></lucide-icon>Dashboard</li>
+        <li><lucide-icon [img]="icons.tasks"></lucide-icon>Tasks</li>
+        <li><lucide-icon [img]="icons.inbox"></lucide-icon>Inbox</li>
+        <li><lucide-icon [img]="icons.calendar"></lucide-icon>Calendar</li>
+        <li><lucide-icon [img]="icons.projects"></lucide-icon>Projects</li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <p class="menu">HR Management</p>
+      <ul>
+        <li><lucide-icon [img]="icons.employees"></lucide-icon>Employees</li>
+        <li><lucide-icon [img]="icons.attendance"></lucide-icon>Attendance</li>
+        <li><lucide-icon [img]="icons.payroll"></lucide-icon>Payroll</li>
+        <li><lucide-icon [img]="icons.hiring"></lucide-icon>Hiring</li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <p class="menu">Analytics</p>
+      <ul>
+        <li><lucide-icon [img]="icons.settings"></lucide-icon>Settings</li>
+        <li><lucide-icon [img]="icons.help"></lucide-icon>Help</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <input placeholder="Search..." />
+      <div class="top-actions">
+        <button class="export">Export</button>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+      Optimize your Efficio experience—track attendance, manage teams, and streamline HR operations effortlessly!
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <h2>Hello, Arnold Smith</h2>
+      <span>Wednesday, 06 March 2025</span>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- CARDS -->
+      <div class="cards">
+        <div class="card" *ngFor="let s of stats">
+          <h4>{{s.title}}</h4>
+          <h2>{{s.value}}</h2>
+
+          <span [class.green]="s.change.includes('+')" 
+                [class.red]="s.change.includes('-')">
+            {{s.change}}
+          </span>
+
+          <p>{{s.info}}</p>
+
+          <!-- ✅ Added -->
+          <button class="details-btn">Details →</button>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="chart-card">
+
+        <div class="chart-header">
+          <h4>Attendance Report</h4>
+          <span class="date">01 March 2025</span>
+        </div>
+
+        <div class="stats">
+          <span>173 Total</span>
+          <span>128 On Time</span>
+          <span>21 Absent</span>
+          <span>24 Late</span>
+        </div>
+
+        <div class="heatmap">
+          <div *ngFor="let h of heatmap" [ngClass]="'level-' + h"></div>
+        </div>
+
+        <div class="months">
+          <span>Jan</span>
+          <span>Feb</span>
+          <span>Mar</span>
+          <span>Apr</span>
+          <span>May</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TASK -->
+    <div class="tasks">
+
+      <div class="task-header">
+        <h3>Task</h3>
+        <div class="task-options">
+            <span class="active">☰ Kanban</span>
+            <span>▦ Table</span>
+            <span>≡ List View</span>
+        </div>
+      </div>
+
+      <div class="task-board">
+
+        <div class="column">
+          <div class="column-header">
+            <h4>New Request</h4>
+            <span class="count">3</span>
+          </div>
+
+          <div class="add-box">+</div>
+
+          <div class="task-card blue">Recruitment</div>
+          <div class="task-card blue">Employee Onboarding</div>
+        </div>
+
+        <div class="column">
+          <div class="column-header">
+            <h4>In Progress</h4>
+            <span class="count">6</span>
+          </div>
+
+          <div class="add-box">+</div>
+
+          <div class="task-card orange">Payroll Processing</div>
+          <div class="task-card orange">Compensation Plan</div>
+        </div>
+
+        <div class="column">
+          <div class="column-header">
+            <h4>Complete</h4>
+            <span class="count">12</span>
+          </div>
+
+          <div class="add-box">+</div>
+
+          <div class="task-card green">Employee Survey</div>
+          <div class="task-card green">Feedback Review</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  background: #f5f7fb;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  padding: 28px 22px;
+  border-right: 1px solid #f1f1f1;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.user img {
+  border-radius: 50%;
+}
+
+.menu {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 10px;
+  border-radius: 8px;
+  color: #4b5563;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 30px 35px;
+  overflow-y: auto;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.topbar input {
+  padding: 11px 14px;
+  width: 300px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.export {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.export:hover {
+  background: #2563eb;
+}
+
+/* INFO */
+.info {
+  background: #eaf2ff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 28px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h4 {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.card h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.green { color: #16a34a; }
+.red { color: #dc2626; }
+
+/* DETAILS BUTTON */
+.details-btn {
+  margin-top: 10px;
+  background: #e0ecff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* CHART */
+.chart-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.stats span {
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+/* HEATMAP */
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+}
+
+.heatmap div {
+  height: 24px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.heatmap div:hover {
+  transform: scale(1.1);
+}
+
+.level-1 { background: #bfdbfe; }
+.level-2 { background: #60a5fa; }
+.level-3 { background: #2563eb; }
+
+.months {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* TASK SECTION */
+.tasks {
+  margin-top: 30px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.task-options span {
+  margin-left: 15px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.task-options .active {
+  color: black;
+  font-weight: 600;
+}
+
+/* TASK BOARD */
+.task-board {
+  display: flex;
+  gap: 22px;
+}
+
+.column {
+  flex: 1;
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  font-size: 12px;
+  background: #e5e7eb;
+  padding: 3px 9px;
+  border-radius: 10px;
+}
+
+.add-box {
+  margin-top: 10px;
+  background: #e5e7eb;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-box:hover {
+  background: #d1d5db;
+}
+
+.task-card {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.blue { background: #dbeafe; }
+.orange { background: #fed7aa; }
+.green { background: #bbf7d0; }
+/* TASK HEADER - LEFT ALIGN + BELOW */
+.task-header {
+  display: flex;
+  flex-direction: column;   /* 👈 important */
+  align-items: flex-start;  /* left align */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* pill container */
+.task-options {
+  display: flex;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 10px;
+  gap: 4px;
+}
+
+/* tabs */
+.task-options span {
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* active tab */
+.task-options .active {
+  background: #ffffff;
+  color: #111827;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+/* ===== UPDATED CARD UI ===== */
+
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* TOP */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h4 {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.menu-dot {
+  font-size: 18px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* MIDDLE */
+.card-middle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card-middle h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* BADGE */
+.badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.badge.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badge.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* TEXT */
+.sub-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.details-btn {
+  background: #e0ecff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.details-btn:hover {
+  background: #c7dbff;
+}
